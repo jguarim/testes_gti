@@ -1,0 +1,132 @@
+﻿@model Projeto.Application.DTO.ClienteDTO
+
+@{
+    ViewData["Title"] = "Alterar";
+}
+
+<h1>Alterar Cliente</h1>
+
+<hr />
+<div class="row">
+    <div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <label asp-for="ClienteId" class="control-label">Id Cliente</label>
+                <input id="ClienteId" asp-for="ClienteId" class="form-control" readonly="readonly" />
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label asp-for="Cpf" class="control-label">CPF*</label>
+                    <input id="CPF" asp-for="Cpf" class="form-control" maxlength="11" />
+                    <span asp-validation-for="Cpf" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Nome" class="control-label">Nome*</label>
+                    <input asp-for="Nome" class="form-control" maxlength="100" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label asp-for="Rg" class="control-label">RG</label>
+                    <input asp-for="Rg" class="form-control" maxlength="10" />
+                    <span asp-validation-for="Rg" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="DataExpedicao" class="control-label">Data Expedição</label>
+                    <input type="date" id="DataExpedicao" asp-for="DataExpedicao" class="form-control" maxlength="10" />
+                    <span asp-validation-for="DataExpedicao" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="OrgaoExpedicao" class="control-label">Órgão Expedição</label>
+                    <input asp-for="OrgaoExpedicao" class="form-control" maxlength="10" />
+                    <span asp-validation-for="OrgaoExpedicao" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="UF" class="control-label">UF Expedição</label>
+                    <input asp-for="UF" class="form-control" maxlength="2" />
+                    <span asp-validation-for="UF" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">
+                    <label asp-for="DataNascimento" class="control-label">Data de Nascimento*</label>
+                    <input type="date" id="DataNascimento" asp-for="DataNascimento" class="form-control" maxlength="10" />
+                    <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="Sexo" class="control-label">Sexo*</label>
+                    <input asp-for="Sexo" class="form-control" maxlength="1" />
+                    <span asp-validation-for="Sexo" class="text-danger"></span>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="EstadoCivil" class="control-label">Estado Civil*</label>
+                    <input asp-for="EstadoCivil" class="form-control" maxlength="20" />
+                    <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div>
+                <label style="color:blue">Endereço</label>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label asp-for="Endereco.EnderecoId" class="control-label">Id Endereço</label>
+                    <input id="CPF" asp-for="Endereco.EnderecoId" class="form-control" readonly="readonly" />
+                </div>
+                <div class="col">
+                    <label asp-for="Endereco.Cep" class="control-label">CEP*</label>
+                    <input asp-for="Endereco.Cep" class="form-control" maxlength="8" />
+                    <span asp-validation-for="Endereco.Cep" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Endereco.Logradouro" class="control-label">Rua*</label>
+                    <input asp-for="Endereco.Logradouro" class="form-control" maxlength="100" />
+                    <span asp-validation-for="Endereco.Logradouro" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Endereco.Numero" class="control-label">Número*</label>
+                    <input asp-for="Endereco.Numero" class="form-control" maxlength="10" />
+                    <span asp-validation-for="Endereco.Numero" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Endereco.Complemento" class="control-label"></label>
+                    <input asp-for="Endereco.Complemento" value="" class="form-control" maxlength="50" />
+                    <span asp-validation-for="Endereco.Complemento" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Endereco.Bairro" class="control-label">Bairro*</label>
+                    <input asp-for="Endereco.Bairro" class="form-control" maxlength="50" />
+                    <span asp-validation-for="Endereco.Bairro" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Endereco.Cidade" class="control-label">Cidade*</label>
+                    <input asp-for="Endereco.Cidade" class="form-control" maxlength="50" />
+                    <span asp-validation-for="Endereco.Cidade" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Endereco.UF" class="control-label">UF*</label>
+                    <input asp-for="Endereco.UF" class="form-control" maxlength="2" />
+                    <span asp-validation-for="Endereco.UF" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="text-lg-right col-md-6">
+                    <input type="submit" value="Alterar" class="btn btn-outline-success" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<br />
+<hr />
+<div>
+    <a asp-action="Index" asp-controller="Cliente">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Projeto.Application.DTO.ClienteDTO>
+
+@{
+    ViewData["Title"] = "Lista de clientes";
+}
+
+<h1>Clientes</h1>
+
+<p>
+    <a asp-action="Incluir">Incluir novo</a>
+</p>
+<div class="panel panel-default">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rg)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataExpedicao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrgaoExpedicao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EstadoCivil)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataExpedicao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrgaoExpedicao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoCivil)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Cliente" asp-route-id="@item.ClienteId" title="Editar" class="btn btn-warning">
+                        <span class="fas fa-edit">Editar</span>
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-controller="Cliente" asp-route-id="@item.ClienteId" title="Excluir" class="btn btn-danger">
+                        <span class="fas fa-trash-alt">Excluir</span>
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Detalhe" asp-controller="Cliente" asp-route-id="@item.ClienteId" title="Detalhe" class="btn btn-dark">
+                        <span class="fas fa-trash-alt">Detalhe</span>
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

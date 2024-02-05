@@ -1,0 +1,120 @@
+﻿@model Projeto.Application.DTO.ClienteDTO
+
+@{
+    ViewData["Title"] = "Detalhe";
+}
+
+<h1>Cliente</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClienteId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rg)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataExpedicao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataExpedicao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrgaoExpedicao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrgaoExpedicao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UF)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UF)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EstadoCivil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EstadoCivil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Logradouro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Logradouro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Numero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Numero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Complemento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Complemento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Cep)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Cep)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Bairro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Bairro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Cidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Cidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.UF)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.UF)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |
+    <a asp-action="Index">Voltar</a>
+</div>
